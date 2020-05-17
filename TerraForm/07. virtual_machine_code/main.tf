@@ -8,7 +8,6 @@ resource "azurerm_virtual_network" "main" {
   address_space       = ["10.0.0.0/16"]
   location            = "${azurerm_resource_group.main.location}"
   resource_group_name = "${azurerm_resource_group.main.name}"
-
   depends_on = ["azurerm_resource_group.main"]
 
 }
@@ -65,7 +64,7 @@ resource "azurerm_virtual_machine" "core" {
 
 # PROFILE OF THE VM - USER / PASSWORD
     os_profile {
-        computer_name = "udemy"
+        computer_name = "udemy1"
         admin_username = "udemy"
         admin_password = "Password123!!"
     }
